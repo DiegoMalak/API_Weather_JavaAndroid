@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margen_general">16dp</dimen>
+    <dimen name="tamanio_titulo">30sp</dimen>
+    <dimen name="tamanio_grados">80sp</dimen>
+    <dimen name="margen_grados">5dp</dimen>
+</resources>

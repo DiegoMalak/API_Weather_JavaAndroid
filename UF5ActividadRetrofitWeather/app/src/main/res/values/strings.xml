@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">UF5ActividadRetrofitWeather</string>
+    <string name="latitud">Latitud</string>
+    <string name="longitud">Longitud</string>
+    <string name="btn_consumir">Consultar tiempo</string>
+    <string name="txt_humedad">HUMEDAD</string>
+    <string name="txt_lluvia">LLUVIA</string>
+</resources>

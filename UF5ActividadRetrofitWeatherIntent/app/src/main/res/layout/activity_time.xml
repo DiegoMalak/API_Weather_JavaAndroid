@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TimeActivity"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/asul_patata"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:id="@+id/tvResultado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margen_grados"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/tamanio_titulo"
+            />
+
+        <ImageView
+            android:id="@+id/ivIcono"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margen_grados"
+            />
+
+        <TextView
+            android:id="@+id/tvHoraRes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margen_grados"
+            android:textAlignment="center"
+            android:textColor="@color/gris_boton"
+            />
+
+        <TextView
+            android:id="@+id/tvGradosRes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margen_grados"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="@dimen/tamanio_grados"
+            android:layout_gravity="center"
+            />
+
+        <LinearLayout
+            android:id="@+id/llHumedadLluvia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/margen_general"
+            >
+
+            <TextView
+                android:id="@+id/tvHumedad"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:textColor="@color/gris_boton"
+                android:textSize="@dimen/tamanio_titulo"
+                android:text="@string/txt_humedad"
+                />
+
+            <TextView
+                android:id="@+id/tvLluvia"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:textColor="@color/gris_boton"
+                android:textSize="@dimen/tamanio_titulo"
+                android:text="@string/txt_lluvia"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llResHumedadLluvia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:id="@+id/tvResHumedad"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:textColor="@color/gris_patata"
+                android:textSize="@dimen/tamanio_titulo"
+                />
+
+            <TextView
+                android:id="@+id/tvResLluvia"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:textColor="@color/gris_patata"
+                android:textSize="@dimen/tamanio_titulo"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvResTiempoDetalles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margen_grados"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/tamanio_titulo"
+            />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
