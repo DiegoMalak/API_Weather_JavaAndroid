@@ -1,10 +1,14 @@
 package com.dam.uf5actividadretrofitweather;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.res.ResourcesCompat;
 
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.dam.uf5actividadretrofitweather.retrofitData.Currently;
 
 import java.util.Date;
 
@@ -66,8 +70,13 @@ public class TimeActivity extends AppCompatActivity {
 
         // Cargar la imagen en el ImageView. Tenemos que usarlo porque no podemos cargar una imagen desde una URL.
         // Metemos las fotos en la carpeta drawable y le pasamos el nombre de la foto.
-        int resourceIdFoto = getApplicationContext().getResources()
+        /*int resourceIdFoto = getApplicationContext().getResources()
                 .getIdentifier(icono, "drawable", getApplicationContext().getPackageName());
-        iv.setImageResource(resourceIdFoto);
+        iv.setImageResource(resourceIdFoto);*/
+
+        Drawable dIcono = ResourcesCompat.getDrawable(getResources(), Currently.getIconId(icono),
+                getApplicationContext().getTheme());
+        iv.setImageDrawable(dIcono);
+
     }
 }

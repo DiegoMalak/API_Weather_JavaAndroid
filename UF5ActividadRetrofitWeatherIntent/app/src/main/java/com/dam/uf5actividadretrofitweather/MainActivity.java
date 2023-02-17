@@ -26,7 +26,6 @@ public class MainActivity extends AppCompatActivity {
     private static final String API_KEY = "11ce4328111023379e0fdc9d28c24a02";
     EditText etLat, etLon;
     Button btn;
-
     ProgressBar pb;
 
     @Override
@@ -80,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
                     // Pasamos la temperatura.
                     intent.putExtra("temperatura", String.format("%d ºC", temperatura.intValue()));
                     // Pasamos la humedad.
-                    intent.putExtra("humedad", weatherRes.getCurrently().getHumidity() + "%");
+                    intent.putExtra("humedad", weatherRes.getCurrently().getHumidity() * 100 + "%");
                     // Pasamos la lluvia.
                     intent.putExtra("lluvia", weatherRes.getCurrently().getPrecipProbability() + "%");
                     // Pasamos la descripción del tiempo.
@@ -99,5 +98,23 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        /*
+        Método para comprobar que estamos conectados a internet.
+        private boolean isNetworkAvailable() {
+            boolean isAvailable=false;
+            //Gestor de conectividad
+            ConnectivityManager manager = (ConnectivityManager)
+                    getSystemService(WeatherActivity.CONNECTIVITY_SERVICE);
+
+            //Objeto que recupera la información de la red
+            NetworkInfo networkInfo = manager.getActiveNetworkInfo();
+            //Si la información de red no es nula y estamos conectados
+            //la red está disponible
+            if(networkInfo!=null && networkInfo.isConnected()){
+                isAvailable=true;
+            }
+            return isAvailable;
+        }
+         */
     }
 }

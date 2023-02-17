@@ -1,5 +1,6 @@
 package com.dam.uf5actividadretrofitweather.retrofitData;
 
+import com.dam.uf5actividadretrofitweather.R;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -191,6 +192,34 @@ public class Currently {
 
     public void setOzone(Double ozone) {
         this.ozone = ozone;
+    }
+
+    public static int getIconId(String icon) {
+        int iconId = 0;
+
+        if (icon.equals("clear-day")) {
+            iconId = R.drawable.clear_day;
+        } else if (icon.equals("clear-night")) {
+            iconId = R.drawable.clear_night;
+        } else if (icon.equals("rain")) {
+            iconId = R.drawable.rain;
+        } else if (icon.equals("snow")) {
+            iconId = R.drawable.snow;
+        } else if (icon.equals("sleet")) {
+            iconId = R.drawable.sleet;
+        } else if (icon.equals("wind")) {
+            iconId = R.drawable.wind;
+        } else if (icon.equals("fog")) {
+            iconId = R.drawable.fog;
+        } else if (icon.equals("cloudy")) {
+            iconId = R.drawable.cloudy;
+        } else if (icon.equals("partly-cloudy-day")) {
+            iconId = R.drawable.partly_cloudy;
+        } else if (icon.equals("partly-cloudy-night")) {
+            iconId = R.drawable.cloudy_night;
+        }
+
+        return iconId;
     }
 
 }
